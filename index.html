@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <meta name ="description" content ="Simple Digital clock made with javascript html and css /> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"rel="stylesheet"/>
+    <meta name ="viewport" content="width=device-width,intial-scale=1.0"/>
+        <title>KARTHIK'S clock</title>
+    
+    <style>
+       body {
+       scroll:smooth;
+       
+margin:0;
+padding:0;
+   background:linear-gradient(56deg,red,orange); 
+   opacity:0.9;
+   height:100vh;
+   width:100vw;
+   color:#fff;
+}
+#cont{
+height:60vh;
+display:flex;
+align-items:center;
+    text-align:center;
+    justify-content:center;
+}
+span{
+
+    border:2px dotted rgba(180,180,180,0.2);
+    text-align:center;
+    padding:12px;
+    font-size:2em;
+    margin:2px;
+    font-family: "Audiowide", sans-serif;
+}
+.p{
+font-family: 'Joan', serif;font-family: 'Kdam Thmor Pro', sans-serif;
+    text-align:center;
+}
+h2{
+font-family: 'Kdam Thmor Pro', sans-serif;
+    text-align:center;
+    padding:20px;
+    box-shadow:10px 4px 20px black;
+    letter-spacing:2px;
+}
+ 
+        
+        
+    </style>
+    
+    
+    </head>
+    <body>
+  <h2> SIMPLE DIGITAL CLOCK</h2>
+       <p id="cont">
+           <span id="hr">00</span>
+            <span>:</span>
+             <span id="min">00</span>
+              <span>:</span>
+               <span id="sec">00</span>
+                <span id="ses">AM</span>
+       </p> 
+      
+<?php
+echo "My first PHP script!";
+?>  
+         <p class="p"> &copy Created by  __ KARTHIK__G</p>
+    </body>
+    
+    <script>
+        function kartoTime(){
+    var time = new Date();
+    var hour = time.getHours();
+    var minutes = time.getMinutes();
+    var seconds = time.getSeconds();
+    
+    
+let hr =  document.getElementById("hr");
+    let min = document.getElementById("min");
+    let sec = document.getElementById("sec");
+    let ses = document.getElementById("ses");
+    
+    
+   
+   
+   if (hour >12){
+       ses.innerHTML = "PM";
+   }
+   else{
+       ses.innerHTML = "AM";
+   }
+   if(hour >= 12){
+       hour -= 12;
+   }
+    
+    hr.innerHTML = hour; 
+   min.innerHTML = minutes;
+   sec.innerHTML = seconds; 
+    
+    
+}
+setInterval(kartoTime,10);
+</script>
+
+</html>
